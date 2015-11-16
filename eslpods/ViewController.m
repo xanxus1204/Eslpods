@@ -510,6 +510,10 @@ int maxback;
         [ttableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
     }
 }
+- (IBAction)createGroupTap:(id)sender {
+}
+- (IBAction)seachGroupTap:(id)sender {
+}
 
 
 @end

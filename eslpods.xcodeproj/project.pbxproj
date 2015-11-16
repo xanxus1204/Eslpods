@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		434A77561BF9D52600A9A606 /* MultipeerHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 434A77551BF9D52600A9A606 /* MultipeerHost.m */; };
+		434A77591BF9D53C00A9A606 /* StreamingPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 434A77581BF9D53C00A9A606 /* StreamingPlayer.m */; };
+		434A775C1BF9D56300A9A606 /* ExtAudioConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 434A775B1BF9D56300A9A606 /* ExtAudioConverter.m */; };
 		43E5A0D21BE1CBCC0004C60D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E5A0D11BE1CBCC0004C60D /* main.m */; };
 		43E5A0DD1BE1CBCC0004C60D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43E5A0DC1BE1CBCC0004C60D /* Assets.xcassets */; };
 		43E5A0E01BE1CBCC0004C60D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43E5A0DE1BE1CBCC0004C60D /* LaunchScreen.storyboard */; };
@@ -41,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		434A77541BF9D52600A9A606 /* MultipeerHost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipeerHost.h; sourceTree = "<group>"; };
+		434A77551BF9D52600A9A606 /* MultipeerHost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipeerHost.m; sourceTree = "<group>"; };
+		434A77571BF9D53C00A9A606 /* StreamingPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamingPlayer.h; sourceTree = "<group>"; };
+		434A77581BF9D53C00A9A606 /* StreamingPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamingPlayer.m; sourceTree = "<group>"; };
+		434A775A1BF9D56300A9A606 /* ExtAudioConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtAudioConverter.h; sourceTree = "<group>"; };
+		434A775B1BF9D56300A9A606 /* ExtAudioConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtAudioConverter.m; sourceTree = "<group>"; };
 		43E5A0CD1BE1CBCC0004C60D /* eslpods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eslpods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43E5A0D11BE1CBCC0004C60D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43E5A0DC1BE1CBCC0004C60D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,6 +135,12 @@
 				43E5A1061BE1CBE90004C60D /* ViewController.m */,
 				43E5A1071BE1CBE90004C60D /* ESLpod.h */,
 				43E5A1081BE1CBE90004C60D /* ESLpod.m */,
+				434A77541BF9D52600A9A606 /* MultipeerHost.h */,
+				434A77551BF9D52600A9A606 /* MultipeerHost.m */,
+				434A77571BF9D53C00A9A606 /* StreamingPlayer.h */,
+				434A77581BF9D53C00A9A606 /* StreamingPlayer.m */,
+				434A775A1BF9D56300A9A606 /* ExtAudioConverter.h */,
+				434A775B1BF9D56300A9A606 /* ExtAudioConverter.m */,
 				43E5A1091BE1CBE90004C60D /* Main.storyboard */,
 				43E5A0DE1BE1CBCC0004C60D /* LaunchScreen.storyboard */,
 				43E5A0E11BE1CBCC0004C60D /* Info.plist */,
@@ -298,8 +313,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434A77561BF9D52600A9A606 /* MultipeerHost.m in Sources */,
+				434A77591BF9D53C00A9A606 /* StreamingPlayer.m in Sources */,
 				43E5A10B1BE1CBE90004C60D /* ViewController.m in Sources */,
 				43E5A10A1BE1CBE90004C60D /* AppDelegate.m in Sources */,
+				434A775C1BF9D56300A9A606 /* ExtAudioConverter.m in Sources */,
 				43E5A10C1BE1CBE90004C60D /* ESLpod.m in Sources */,
 				43E5A0D21BE1CBCC0004C60D /* main.m in Sources */,
 			);
@@ -440,6 +458,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kurumecs.eslpods;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -455,6 +474,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kurumecs.eslpods;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
