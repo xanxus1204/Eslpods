@@ -4,10 +4,14 @@
 #import <AVFoundation/AVFoundation.h>
 #import <AudioUnit/AudioUnit.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import "MultipeerHost.h"
 #import "ESLpod.h"
+#import "StreamingPlayer.h"
+#import "ExtAudioConverter.h"
+#import "AudioConverter.h"
 
 
-@interface ViewController : UIViewController<MPMediaPickerControllerDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface ViewController : UIViewController<MPMediaPickerControllerDelegate,UITableViewDelegate,UITableViewDataSource,MultipeerDataDelegate>
 {
     __weak IBOutlet UITableView *ttableView;
     

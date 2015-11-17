@@ -29,15 +29,22 @@
 
 @implementation MultipeerHost
 
-
+-(id)init{
+    self=[super init];
+    if (self) {
+        self.mPeerID = [[MCPeerID alloc] initWithDisplayName:[[UIDevice currentDevice]name]];
+        //セッションを初期化
+        self.mSession= [[MCSession alloc] initWithPeer:self.mPeerID];
+        //デリゲートを設定
+        self.mSession.delegate = self;
+         self.solo=YES;
+    }
+    return self;
+}
 -(void)startClient{
     if (self.connectedpeer.count==0) {
     self.connectedpeer=[[NSMutableArray alloc]init];
-    self.mPeerID = [[MCPeerID alloc] initWithDisplayName:[[UIDevice currentDevice]name]];
-    //セッションを初期化
-    self.mSession= [[MCSession alloc] initWithPeer:self.mPeerID];
-    //デリゲートを設定
-    self.mSession.delegate = self;
+   
     
     self.nearbyAd=[[MCNearbyServiceAdvertiser alloc]initWithPeer:self.mPeerID discoveryInfo:nil serviceType:@"kurumecs"];
     self.nearbyAd.delegate=self;
@@ -66,13 +73,7 @@
     
 
 }
--(id)init{
-    if (self=[super init]){
-        self.solo=YES;
-       
-    }
-    return  self;
-}
+
 //Multipeer Connectivity delegate
 // Remote peer changed state
 - (void)session:(MCSession *)session peer:(MCPeerID *)peerID didChangeState:(MCSessionState)state{
