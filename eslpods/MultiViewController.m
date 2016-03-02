@@ -31,6 +31,7 @@
 @property NSString *timestr;//現在の分:秒
 @property NSString *maxtimelabelstr;//残りの分:秒
 
+@property int limitOfSongs;
 
 @property (weak, nonatomic) IBOutlet UITableView *StreamTable;
 @property (weak, nonatomic) IBOutlet UILabel *StreamerLabel;
@@ -56,7 +57,12 @@
     self.StreamTable.dataSource=self;
     self.titleArray=[[NSMutableArray alloc]init];
     self.URLarray=[[NSMutableArray alloc]init];
-    for (int i = 0;i < LIMIT; i++) {
+    if (self.mediaItemCollection.items.count>=LIMIT) {
+        _limitOfSongs=LIMIT;
+    }else{
+        _limitOfSongs=(int)self.mediaItemCollection.items.count;
+    }
+    for (int i = 0;i < _limitOfSongs; i++) {
         MPMediaItem *nameitem=[self.mediaItemCollection.items objectAtIndex:i];
         
      NSString*title=[nameitem valueForProperty:MPMediaItemPropertyTitle];
@@ -66,7 +72,7 @@
     }
     [self.StreamTable reloadData];
     [[[NSOperationQueue alloc] init] addOperationWithBlock:^{
-        for (int i = 0;i < LIMIT; i++) {
+        for (int i = 0;i < _limitOfSongs; i++) {
         MPMediaItem *item = [self.mediaItemCollection.items objectAtIndex:i];
         NSURL * url = [self convertItemtoAAC:item];
         [self.URLarray addObject:url];
