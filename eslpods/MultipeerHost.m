@@ -140,7 +140,7 @@
                     interval=0;
                     priority--;
                 }else{
-                    interval=(double)seconds/(double)data.length*32768.0/1.3;//何秒に一パケット送るか
+                    interval=(double)seconds/(double)data.length*32768.0/1.2;//何秒に一パケット送るか
                 }
                 [NSThread sleepForTimeInterval:interval];
                 [data getBytes:buf range:NSMakeRange(ini,d)];

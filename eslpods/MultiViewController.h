@@ -5,7 +5,7 @@
 //  Created by 椛島優 on 2015/11/20.
 //  Copyright © 2015年 椛島優. All rights reserved.
 //
-
+#define LIMIT 10
 #import <UIKit/UIKit.h>
 #import "StreamingPlayer.h"
 #import "ExtAudioConverter.h"

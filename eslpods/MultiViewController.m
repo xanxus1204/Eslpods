@@ -56,7 +56,7 @@
     self.StreamTable.dataSource=self;
     self.titleArray=[[NSMutableArray alloc]init];
     self.URLarray=[[NSMutableArray alloc]init];
-    for (int i = 0;i < self.mediaItemCollection.count; i++) {
+    for (int i = 0;i < LIMIT; i++) {
         MPMediaItem *nameitem=[self.mediaItemCollection.items objectAtIndex:i];
         
      NSString*title=[nameitem valueForProperty:MPMediaItemPropertyTitle];
@@ -66,7 +66,7 @@
     }
     [self.StreamTable reloadData];
     [[[NSOperationQueue alloc] init] addOperationWithBlock:^{
-        for (int i = 0;i < self.mediaItemCollection.count; i++) {
+        for (int i = 0;i < LIMIT; i++) {
         MPMediaItem *item = [self.mediaItemCollection.items objectAtIndex:i];
         NSURL * url = [self convertItemtoAAC:item];
         [self.URLarray addObject:url];
